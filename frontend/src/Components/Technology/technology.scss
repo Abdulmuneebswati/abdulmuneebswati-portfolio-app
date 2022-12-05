@@ -1,0 +1,86 @@
+.technology{
+    // height: 70vh;
+    margin-top: 10rem;
+    // margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    .title{
+        // width: 100%;
+        text-align: center;
+        color: var(--black);
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .dtitle{
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+        height: 30vh;
+
+    }
+    .skillList{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+        text-align: center;
+        gap: 10px;
+        .skill{
+            width: 30%;
+            padding: 10px;
+            p{
+                &:hover{
+                    cursor: zoom-in;
+                    font-size: 21px;
+                     color: var(--orange);
+                 }
+            }
+        }
+    }
+    .blur2{
+        position: absolute;
+        width: 22rem;
+        height: 14rem;
+        background-repeat: 50%;
+        background:#edd0ff ;
+        z-index: -9;
+        left: -4rem;
+        top: 80rem;
+        // bottom: 90rem;
+        filter: blur(72px);
+    }
+    .blur1{
+        position: absolute;
+        width: 22rem;
+        height: 14rem;
+        background-repeat: 50%;
+        background:#ABF1FF94;
+        z-index: -9;
+        filter: blur(72px);
+        left: 41rem;
+        top: 72rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .technology{
+        padding: 0;
+        .title{
+            width: 80%;
+            text-align: center;
+    // padding: 20px;
+            height: 20vh;
+            
+        }
+        .skillList{
+            gap: 5px;
+            align-items: flex-start;
+            justify-content: start;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.education{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 20px;
+    // width: 100%;
+    .title{
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: var(--orange);
+    }
+    .educationDetails{
+                margin: 2rem 0;
+                .educationDetail{
+                    padding: 20px 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    .degree{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                    .desc{
+                        margin-top: 8px;
+                        font-size: 18px;
+                        color: var(--gray);
+                    }
+                    .year{
+                        font-style:italic;
+                        font-weight: 550;
+                    }
+                }
+                .blur1{
+                    position: absolute;
+                    width: 22rem;
+                    height: 14rem;
+                    background-repeat: 50%;
+                    background:#edd0ff ;
+                    z-index: -9;
+                    top: 120rem;
+                    left: -10rem;
+                    filter: blur(72px);
+                }
+        }
+}
+
+@media screen and (max-width:480px) {
+    .education{
+    padding: 0px;
+    width: 80%;
+        .educationDetails{
+            margin: 0;
+        }
+    }
+
+}

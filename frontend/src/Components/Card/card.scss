@@ -1,0 +1,38 @@
+.card{
+    border: 7px solid var(--orangeCard);
+    height: 13rem;
+    width: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: var(--boxShadow);
+    background: rgba(255, 255, 255, 0.26);
+    gap: 10px;
+    border-radius: 1rem;
+    img{
+        transform: scale(0.6);
+        margin-bottom: -2rem;
+        margin-top: -2rem;
+    }    
+    :nth-child(3){
+        color: var(--gray);
+  font-size: 16px;
+    }
+    .c-button {
+        background: #FFFFFF;
+        box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
+        border-radius: 7px;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        color: #5290FD;
+        &:hover{
+            transform: scale(1.1);
+    cursor: pointer;
+        }
+    }
+
+}

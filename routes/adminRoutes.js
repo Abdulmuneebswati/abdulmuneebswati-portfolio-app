@@ -1,0 +1,23 @@
+const express = require("express");
+const AdminController = require("../controllers/adminController");
+const verifyAdmin = require("../middlewares/adminAuth");
+const adminRoute = express.Router();
+
+adminRoute.post("/",AdminController.createAdmin);
+adminRoute.post("/login",AdminController.loginAdmin);
+adminRoute.get("/info",AdminController.getInfo);
+adminRoute.patch("/info",verifyAdmin,AdminController.updateInfo);
+adminRoute.patch("/services",verifyAdmin,AdminController.updateServices);
+adminRoute.patch("/technologies",verifyAdmin,AdminController.updateTechnologies);
+adminRoute.get("/project/:id",AdminController.getProject);
+adminRoute.patch("/project/:id",verifyAdmin,AdminController.updateProject);
+adminRoute.post("/project",verifyAdmin,AdminController.uploadProject);
+adminRoute.delete("/project/:id",verifyAdmin,AdminController.deleteProject);
+adminRoute.post("/recommendation",verifyAdmin,AdminController.uploadRecommendation);
+adminRoute.get("/recommendation",AdminController.getRecommendation);
+adminRoute.delete("/recommendation/:id",verifyAdmin,AdminController.deleteRecommendation);
+adminRoute.post("/education",verifyAdmin,AdminController.listEducation);
+adminRoute.delete("/education/:id",verifyAdmin,AdminController.deleteEducation);
+adminRoute.get("/resetpassword",verifyAdmin,AdminController.resetPassword);
+adminRoute.patch("/resetpassword/:id/:token",verifyAdmin,AdminController.changePassword);
+module.exports = adminRoute;

@@ -1,0 +1,98 @@
+.testmonials{
+    height: 140vh;
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    align-items: center;justify-content: center;
+    margin-top: 7rem;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    .swiper{
+        width: 100%;
+        height: 70%;
+    }
+    .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-pagination-bullet{
+        background: rgb(172, 170, 170);
+    }
+    .swiper-pagination-bullet-active{
+        background: var(--orange);
+    }
+    .t-heading{
+        align-self: start;
+        .blur1{
+            position: absolute;
+            width: 22rem;
+            height: 10rem;
+            background-repeat: 50%;
+            background:#edd0ff ;
+            z-index: -9;
+            top: 13rem;
+            left: -10rem;
+            filter: blur(72px);
+        }
+        .blur2{
+            position: absolute;
+            width: 22rem;
+            height: 14rem;
+            background-repeat: 50%;
+            background:#edd0ff ;
+            z-index: -9;
+            top: 5rem;
+            left: 40rem;
+            filter: blur(72px);
+        }
+        *{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        :nth-child(2){
+            color: var(--orange);
+        }
+    }
+    .testimonial{
+        display: flex;flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem;
+        width: 30rem;
+        height: 12rem;
+        background: rgba(255,255,255,0.26);
+        border: 7px solid var(--blueCard);
+        box-shadow: var(--boxShadow);
+        border-radius: 20px;
+        img{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 100%;
+        }
+        span{
+            color: var(--gray);
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    
+    .testmonials{
+        padding: 0;
+        margin: 0;
+        margin-left: -1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        .testimonial{
+            justify-content: start;
+            width: 10rem;
+            height: auto;
+            margin-left: -2rem;
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
