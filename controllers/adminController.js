@@ -8,7 +8,6 @@ const Project = require("../Db/Models/projects");
 const Testmonials = require("../Db/Models/testmonials");
 const Education = require("../Db/Models/education");
 const transporter = require("../middlewares/email");
-const {SECRET_KEY ,TECH_ID ,Email_Host,Email_Port,Email_User,Email_pass ,Email_FROM,PORT,DB_URL}  = require("../config/keys");
 
 
 class AdminController {
